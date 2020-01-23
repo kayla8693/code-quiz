@@ -22,7 +22,15 @@
 }
 
 .start {
-    margin: 100px 500px;
+    margin: 100px auto;
+
+}
+
+@media screen and (max-width: 768px) {
+    .start {
+        margin: 100px 40px;
+    }
+
 }
 
 #feedback {
@@ -63,3 +71,4 @@ h2 {
 #rules {
     text-align: center;
 }
+
