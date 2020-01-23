@@ -1,0 +1,27 @@
+-make start page
+    -start quiz button leads to first question + starts timer
+    -highscores button takes user to highscores
+
+
+-come up w questions
+    -3 wrong answers options
+        -trigger time penalty; move to next question; incorrect message (w/ sound?)
+    -1 correct answer
+        -trigger move to next question; correct message (w/ sound?)
+    -15 secs per question
+
+-"click" on answer gives feedback of correct or incorrect
+    -also triggers move to next questions
+
+-final score calculated after answering last questions
+    -10 points for every correct
+    -calculated based on time
+
+-time penalty of 10 sec for wrong answer
+    -append answer to time?
+
+-end of timer triggres end of quiz
+
+
+-enter initials w score after end of quiz
+    -score stored in local storage

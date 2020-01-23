@@ -4,24 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Code Quiz</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 highscore-nav">View Highscores</div>
 
+            <p class="time col-md-1">Time: </p>
+        </div>
+        <div class="title">
+            <h2>Code Quiz</h2>
+            <br>
+            <div class="row">
+                <div class="col-md-4"></div>
+                
+                <p class="col-md-4" id="rules">Answer the following questions to the best of your ability. You will have 75 seconds. If you get a question wrong, you will lose 10 seconds. When time runs out or when you finish the last question, the quiz will end and your score is calculated by questions you answered correctly + time remaining * 2. Good Luck!!!</p>
+            </div>
+        </div>
+        <div class="start-button">
+            <button type="button" class="btn btn-danger start">Start Quiz</button>
+        </div>
 
+        <!-- add next question button -->
+            <div class="quiz-box hide">
+                <div id="question-text">Question Goes Here</div>
+                <div class="choice-buttons">
+                    <button class="btn next" id="choice-1">Choice 1</button>
+                    <br>
+                    <button class="btn next" id="choice-2">Choice 2</button>
+                    <br>
+                    <button class="btn next" id="choice-3">Choice 3</button>
+                    <br>
+                    <button class="btn next" id="choice-4">Choice 4</button>  
+                    
+                    <div id="feedback"></div>
+                </div>
 
+            </div>
+            <div class="hide" id="score">Answers Correct: </div>
+            <div class="hide" id="end-box">
+                <P id="final-score">Your final score is: </P>
+                <div class="row">
+                <div class="col-md-3">Enter initials </div>
+                
+                <input class="col-md-2" id="initials">
+                <button class="col-md-2 btn btn-primary btn-sm" id="submit">Submit</button>
+                </div>
+            </div>
 
+            <div class="hide" id="highscore-box">
+                <h2>Highscores</h2>
 
+                <p id="highscore-value">Score: <span id="user-score"></span></p>
 
+                <div class="row">
+                    <button class="btn col-md-6 btn-primary btn-sm" id="go-back">Go Back</button>
+                    <button class="btn col-md-6 btn-primary btn-sm" id="clear">Clear Highscores</button>
+                </div>
 
-
-
-
+            </div>
+            
+    </div>
     <script src="assets/script.js"></script>
     <script src="assets/questions.js"></script>
+
 </body>
 </html>
